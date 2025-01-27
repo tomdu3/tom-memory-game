@@ -29,14 +29,14 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**:
 ```bash
-git clone https://github.com/your-username/memory-game.git
+git clone https://github.com/tomdu3/tom-memory-game.git
 ```
 2. **Navigate to the Project Directory**:
 ```bash
-cd memory-game
+cd tom-memory-game
 ```
 3. **Open the Game**:
-    - Open the index.html file in your preferred web browser.
+    - Open the `index.html` file in your preferred web browser.
 
 ## File Structure
 
