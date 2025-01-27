@@ -1,2 +1,99 @@
-# tom-memory-game
+# Tom's Memory Game
 [HTML | CSS | JS] This is a simple Memory Game where players flip cards to find matching pairs.
+
+# Memory Game
+
+## Description
+
+This is a simple Memory Game where players flip cards to find matching pairs. The game is built using HTML for structure, CSS for styling, and JavaScript for game logic and DOM manipulation.
+
+## Features
+
+- **Game Board**: A grid of cards that players can flip to reveal their faces.
+- **Shuffle Function**: Cards are shuffled at the start of each game to ensure a unique experience every time.
+- **Matching Logic**: When two cards are flipped, the game checks if they match. If they do, they remain face-up. If not, they flip back after a short delay.
+- **Restart Button**: A button to reset the game board and shuffle the cards for a new game.
+- **Responsive Design**: The game is designed to work well on both desktop and mobile devices.
+
+## How to Play
+
+1. **Start the Game**: Open the `index.html` file in your web browser.
+2. **Flip Cards**: Click on any card to flip it and reveal its face.
+3. **Find Matches**: Try to find two cards with the same face. If they match, they will remain face-up.
+4. **Continue Playing**: Keep flipping cards until all pairs have been found.
+5. **Restart**: Click the "Restart" button to shuffle the cards and start a new game.
+
+## Setup
+
+To set up the project locally, follow these steps:
+
+1. **Clone the Repository**:
+```bash
+git clone https://github.com/your-username/memory-game.git
+```
+2. **Navigate to the Project Directory**:
+```bash
+cd memory-game
+```
+3. **Open the Game**:
+    - Open the index.html file in your preferred web browser.
+
+## File Structure
+
+```text
+memory-game/
+├── index.html          # Main HTML file for the game structure
+├── styles.css          # CSS file for styling the game
+├── script.js           # JavaScript file for game logic
+├── README.md           # This documentation
+```
+
+## Code Overview
+
+### HTML (`index.html`)
+
+-   **Game Container**: A `div` element that holds the game board.
+    
+-   **Header**: Contains the game title and a restart button.
+    
+-   **Card Elements**: Each card is represented by a `div` element with a class for styling and event handling.
+    
+
+### CSS (`styles.css`)
+
+-   **Grid Layout**: The game board uses CSS Grid for a responsive layout.
+    
+-   **Card Styling**: Cards have front/back faces with flip animations.
+    
+-   **Responsive Design**: Media queries adjust the layout for mobile devices.
+    
+
+### JavaScript (`script.js`)
+
+-   **Card Flip Logic**: Handles card clicks and flip animations.
+    
+-   **Shuffle Function**: Randomizes card positions using the Fisher-Yates algorithm.
+    
+-   **Matching Logic**: Compares flipped cards and triggers delays for mismatches.
+    
+-   **Restart Function**: Resets the game state and shuffles cards.
+
+## License
+
+This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
+
+___
+
+## Acknowledgments
+
+-   Inspired by classic memory card games.
+    
+-   Built with HTML, CSS, and JavaScript.
+    
+
+___
+
+## Contact
+
+For questions or feedback:  
+:mailbox:  [tomdu3@ymail.com](mailto:tomdu3@ymail.com)
