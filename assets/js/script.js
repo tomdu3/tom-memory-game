@@ -9,6 +9,10 @@ let prevCard = null;
 document.documentElement.style.setProperty("--grid-width", gridWidth);
 document.documentElement.style.setProperty("--grid-height", gridHeight);
 
+// Update year element
+const yearElement = document.getElementById("year");
+yearElement.textContent = new Date().getFullYear();
+
 // restart button
 const restartButton = document.querySelector("#restart");
 restartButton.addEventListener("click", () => {
