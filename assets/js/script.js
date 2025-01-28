@@ -3,6 +3,8 @@ const gridWidth = 4;
 const gridHeight = 4;
 let grid = null;// initialize the grid
 let randomArray = null;
+let cardWidth = 150;
+let cardHeight = 150;
 
 function makeGrid(width, height) {
   // check if the grid is valid
@@ -55,7 +57,7 @@ function makeGrid(width, height) {
 function generateImageCard(idNumber) {
   // generate a random image
   const image = document.createElement("img");
-  image.src = `./assets/img/memory/${(idNumber < 10 ? "0" : "") + idNumber}.webp`;
+  image.src = `./assets/img/memory/${(idNumber < 9 ? "0" : "") + (idNumber +1)}.webp`;
   image.alt = "Memory Card image";
   return image;
 }
@@ -69,12 +71,29 @@ function generateRandomArray(width, height) {
   }
   // shuffle the array
   for (let i = randomArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i ) + 1);
     [randomArray[i], randomArray[j]] = [randomArray[j], randomArray[i]];
   }
   return randomArray;
 }
 
+function displayGrid(grid, randomArray) {
+  // display the grid
+  
+  const backImgSrc = "./assets/img/back.jpg";
+  const backImgAlt = "Memory back image";
+  for (let i = 0; i < grid.children.length; i++) {
+    const container = grid.children[i];
+    const card = container.children[0];
+    const front = card.children[0];
+    const back = card.children[1];
+    front.appendChild(generateImageCard(randomArray[i]));
+    const backImg = document.createElement("img");
+    backImg.src = backImgSrc;
+    backImg.alt = backImgAlt;
+    back.appendChild(backImg);
+  }    
+}
 
 // call the function to get grid
 grid = makeGrid(gridWidth, gridHeight);
@@ -83,4 +102,5 @@ if (grid) {
     randomArray = generateRandomArray(gridWidth, gridHeight);
     const img = generateImageCard(randomArray[0]);
     console.log(img);
+    displayGrid(grid, randomArray);
 }
