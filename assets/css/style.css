@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +9,57 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(45deg, orange, red);
-    font-family: Georgia, Helvetica, Times, serif;
-    color: rgb(222, 222, 222);
+    background: linear-gradient(45deg, blue, lightblue);
+    font-family: 'Happy Monkey', Helvetica, Times, serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: lightgray;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgba(0, 150, 0, 0.5);
+    padding: 10px 25px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    padding: 10px 25px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: lightgray;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* Game Board */
 .container {
-    width: 150px;
-    height: 150px;
+    width: var(--card-width);
+    height: var(--card-height);
     overflow: hidden;
+    border-radius: 25px;
 }
 
 .card {
@@ -28,6 +68,7 @@ body {
     position: relative;
     transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
+    border-radius: 25px;
 }
 
 .container:hover {
@@ -62,8 +103,8 @@ body {
 /* Game Board */
 
 .game-board {
-    width: calc(var(--grid-width) * 150px + (var(--grid-width) - 1) * 5px);
-    height: calc(var(--grid-height) * 150px + (var(--grid-height) - 1) * 5px);
+    width: calc(var(--card-width)* var(--grid-width));
+    height: calc(var(--card-height) * var(--grid-height) );
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(var(--grid-width), 1fr);
