@@ -3,13 +3,17 @@ const gridWidth = 4;
 const gridHeight = 4;
 let grid = null; // Initialize the grid
 let randomArray = null;
-let cardWidth = 150;
-let cardHeight = 150;
 let prevCard = null;
 
 // Set CSS variables for card width and height
 document.documentElement.style.setProperty("--grid-width", gridWidth);
 document.documentElement.style.setProperty("--grid-height", gridHeight);
+
+// restart button
+const restartButton = document.querySelector("#restart");
+restartButton.addEventListener("click", () => {
+    location.reload();
+});
 
 function makeGrid(width, height) {
   // Check if the grid is valid

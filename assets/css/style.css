@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
+:root {
+    --card-width: 110px;
+    --card-height: 110px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +26,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     padding-bottom: 20px;
@@ -106,7 +111,6 @@ button:hover {
 }
 
 /* Game Board */
-
 .game-board {
     width: calc(var(--card-width) * var(--grid-width));
     height: calc(var(--card-height) * var(--grid-height));
@@ -118,14 +122,43 @@ button:hover {
     perspective: 1000px;
 }
 
-/* Responsiveness */
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    color: lightgray;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
 
-@media (max-width: 768px) {
+/* Responsiveness */
+@media (max-width: 821px) {
     :root {
-        --card-width: 100px;
-        --card-height: 100px;
+        --card-width: 120px;
+        --card-height: 120px;
     }
 
+    body {
+        justify-content: space-between;
+    }
+    header {
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 5px 15px;
+        margin: 0;
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 5px 15px;
+        margin-bottom: 0;
+    }
     .game-board {
         gap: 8px;
     }
@@ -133,17 +166,23 @@ button:hover {
 
 @media (max-width: 480px) {
     :root {
-        --card-width: 75px;
-        --card-height: 75px;
+        --card-width: 80px;
+        --card-height: 80px;
     }
-
+    
+    body {
+        justify-content: space-between;
+    }
+    header {
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
     .game-board {
         gap: 5px;
     }
 }
 
 /* Accessibility */
-
 .container:focus {
     outline: 2px solid #fff;
     outline-offset: 4px;
