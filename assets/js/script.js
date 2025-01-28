@@ -52,12 +52,12 @@ function makeGrid(width, height) {
   return grid;
 }
 
-function generateRandomImage(idNumber) {
+function generateImageCard(idNumber) {
   // generate a random image
-  const randomImage = document.createElement("img");
-  randomImage.src = `./assets/img/memory/${(idNumber < 10 ? "0" : "") + idNumber}.webp`;
-  randomImage.alt = "Memory Card image";
-  return randomImage;
+  const image = document.createElement("img");
+  image.src = `./assets/img/memory/${(idNumber < 10 ? "0" : "") + idNumber}.webp`;
+  image.alt = "Memory Card image";
+  return image;
 }
 
 function generateRandomArray(width, height) {
@@ -81,6 +81,6 @@ grid = makeGrid(gridWidth, gridHeight);
 console.log(`${grid ? "Grid created" : "Grid not created"}`);
 if (grid) {
     randomArray = generateRandomArray(gridWidth, gridHeight);
-    const img = generateRandomImage(randomArray[0]);
+    const img = generateImageCard(randomArray[0]);
     console.log(img);
 }
