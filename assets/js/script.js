@@ -74,8 +74,9 @@ function generateRandomArray(width, height) {
     randomArray.push(i);
   }
   // shuffle the array
+  console.log(randomArray);
   for (let i = randomArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i ) + 1);
+    const j = Math.floor(Math.random() * (i +1));
     [randomArray[i], randomArray[j]] = [randomArray[j], randomArray[i]];
   }
   return randomArray;
@@ -104,6 +105,7 @@ grid = makeGrid(gridWidth, gridHeight);
 console.log(`${grid ? "Grid created" : "Grid not created"}`);
 if (grid) {
     randomArray = generateRandomArray(gridWidth, gridHeight);
+    console.table(randomArray);
     const img = generateImageCard(randomArray[0]);
     console.log(img);
     displayGrid(grid, randomArray);
