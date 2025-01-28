@@ -123,18 +123,6 @@ if (grid) {
         prevCard = container;
         countClick++;
       } else if (countClick === 1) {
-        // Check if the same card is clicked again
-        if (prevCard === container) {
-          // Flip back the card and reset the state
-          console.log("Same card clicked!");
-          setTimeout(() => {
-            container.classList.remove("flip");
-            prevCard = null;
-            countClick = 0;
-          }, 500);
-          return;
-        }
-
         // Second card flipped
         countClick++;
         isChecking = true; // Block further clicks until match check is complete
