@@ -6,6 +6,10 @@ let randomArray = null;
 let cardWidth = 150;
 let cardHeight = 150;
 
+// Set CSS variables for card width and height
+document.documentElement.style.setProperty("--grid-width", gridWidth);
+document.documentElement.style.setProperty("--grid-height", gridHeight);
+
 function makeGrid(width, height) {
   // check if the grid is valid
   if (width < 1 || height < 1) {
