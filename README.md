@@ -42,21 +42,27 @@ cd tom-memory-game
 
 ```text
 memory-game/
-├── index.html          # Main HTML file for the game structure
-├── styles.css          # CSS file for styling the game
-├── script.js           # JavaScript file for game logic
-├── README.md           # This documentation
+├── assets/            # Folder for game assets
+│   ├── img/           # Folder for game images
+│   │   └──── memory/  # Folder for memory card images
+│   ├── css/           # Folder for CSS stylesheets
+|   |   └── style.css  # Main CSS file 
+│   └─── js/           # Folder for JavaScript scripts
+│       └── script.js  # Main JavaScript file for game logic
+├── index.html         # Main HTML file for the game structure
+├── LICENSE            # License information
+├── README.md          # This documentation
 ```
 
 ## Code Overview
 
 ### HTML (`index.html`)
-
--   **Game Container**: A `div` element that holds the game board.
     
 -   **Header**: Contains the game title and a restart button.
     
--   **Card Elements**: Each card is represented by a `div` element with a class for styling and event handling.
+-   **Game Board**: Displays the grid of cards. It is a main container for the game logic.
+
+-   **Footer**: Displays the copyright information.
     
 
 ### CSS (`styles.css`)
