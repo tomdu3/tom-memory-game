@@ -18,7 +18,7 @@ body {
     font-family: 'Happy Monkey', Helvetica, Times, serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -38,7 +38,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: rgba(0, 150, 0, 0.5);
@@ -165,25 +165,36 @@ footer {
     }
 
     body {
-        justify-content: space-between;
+        justify-content: center;
+        background: linear-gradient(90deg, blue, lightblue);
+        gap: 3rem;
     }
+
     header {
-        margin-top: 5px;
+        margin-top: 2rem;
         padding-bottom: 5px;
     }
 
     h1 {
         font-size: 1.5rem;
         padding: 5px 15px;
-        margin: 0;
+        margin-bottom: 2rem;
     }
+
     button {
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 5px 15px;
         margin-bottom: 0;
     }
+
     .game-board {
         gap: 8px;
+    }
+
+    footer {
+        position: static;
+        font-size:1rem;
+        margin-top: 10px;
     }
 }
 
@@ -195,13 +206,34 @@ footer {
     
     body {
         justify-content: space-between;
+        background: linear-gradient(90deg, blue, lightblue);
     }
     header {
-        margin-top: 5px;
-        padding-bottom: 5px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        button {
+            padding: 10px 25px;
+            margin: 25px 0;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: lightgray;
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
     }
+
     .game-board {
         gap: 5px;
+    }
+
+    footer {
+        position: static;
+        font-size: 0.7rem;
+        margin-top: 30px;
     }
 }
 
