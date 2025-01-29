@@ -2,7 +2,7 @@
 
 ![Tom's Memory Game Screenshot](./assets/docs/amiresponsive.png)
 
-[Link to Live Site](tom-memory.netlify.app)
+[Link to Live Site](https://tom-memory.netlify.app/)
 
 [HTML | CSS | JS] This is a simple Memory Game where players flip cards to find matching pairs.
 
