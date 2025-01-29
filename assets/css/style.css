@@ -157,7 +157,7 @@ footer {
 }
 
 /* Responsiveness */
-@media (max-width: 821px) {
+@media (max-width: 900px) {
     :root {
         --card-width: 120px;
         --card-height: 120px;
@@ -209,12 +209,12 @@ footer {
         background: linear-gradient(90deg, blue, lightblue);
     }
     header {
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
 
         button {
             padding: 10px 25px;
-            margin: 25px 0;
+            margin: 15px 0;
             border: none;
             border-radius: 50px;
             font-size: 1rem;
