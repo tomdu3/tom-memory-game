@@ -12,9 +12,8 @@
 }
 
 body {
-    height: 100vh;
     overflow: hidden;
-    background: linear-gradient(45deg, blue, lightblue);
+    background: linear-gradient(90deg, blue, lightblue);
     font-family: 'Happy Monkey', Helvetica, Times, serif;
     display: flex;
     flex-direction: column;
