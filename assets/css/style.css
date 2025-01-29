@@ -134,6 +134,29 @@ footer {
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Win Banner */
+#win-banner {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 174, 0, 0.85);
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid darkblue;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transition: transform 0.5s ease-in-out;
+}
+
+#win-banner.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /* Responsiveness */
 @media (max-width: 821px) {
     :root {

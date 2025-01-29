@@ -4,6 +4,7 @@ const gridHeight = 4;
 let grid = null; // Initialize the grid
 let randomArray = null;
 let prevCard = null;
+let matchedPairs = 0; // Keep track of matched pairs
 
 // Set CSS variables for card width and height
 document.documentElement.style.setProperty("--grid-width", gridWidth);
@@ -18,6 +19,34 @@ const restartButton = document.querySelector("#restart");
 restartButton.addEventListener("click", () => {
     location.reload();
 });
+
+// Function to show the "You've Won" banner
+function showWinBanner() {
+    const banner = document.createElement("div");
+    banner.id = "win-banner";
+    banner.textContent = "🎉 You've Won the Game! 🎉";
+    document.body.appendChild(banner);
+
+    // Remove cursor pointer from container:hover
+    const containers = document.querySelectorAll(".container");
+    containers.forEach((container) => {
+        container.style.cursor = "default";
+    });
+    
+    // Add animation to the banner
+    setTimeout(() => {
+        banner.classList.add("show");
+    }, 100);
+}
+
+// Function to check if all pairs are matched
+function checkWinCondition() {
+    if (matchedPairs === (gridWidth * gridHeight) / 2) {
+        setTimeout(() => {
+            showWinBanner();
+        }, 500);
+    }
+}
 
 function makeGrid(width, height) {
     // Check if the grid is valid
@@ -144,15 +173,17 @@ if (grid) {
                 if (prevSrc === currentSrc) {
                     // Cards match
                     console.log("Match!");
+                    matchedPairs++; // Increment matched pairs count
                     prevCard = null;
                     countClick = 0;
                     isChecking = false; // Allow further clicks
+                    checkWinCondition(); // Check if all pairs are matched
                 } else {
                     // Cards do not match
                     console.log("No Match!");
                     setTimeout(() => {
-                        prevCard.classList.add("flip"); // Flip back to the back side
-                        container.classList.add("flip"); // Flip back to the back side
+                        prevCard.classList.add("flip");
+                        container.classList.add("flip");
                         prevCard = null;
                         countClick = 0;
                         isChecking = false; // Allow further clicks
